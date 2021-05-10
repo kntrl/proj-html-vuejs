@@ -37,11 +37,32 @@ a:hover {
 	justify-content: space-between;
 }
 
+.flex.around {
+	justify-content: space-around;
+}
+
 .flex.center {
 	align-content: center;
+}
+
+//COLOR
+.brand {
+	color: $brand;
+}
+.base {
+	color: $base;
 }
 
 //GLOBAL
 body {
 	font-size: $font_size;
+	font-family: $base_font;
+	color: $primary;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: $brand_font;
 }

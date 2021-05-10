@@ -34,22 +34,43 @@ a:hover {
   justify-content: space-between;
 }
 
+.flex.around {
+  justify-content: space-around;
+}
+
 .flex.center {
   align-content: center;
 }
 
+.brand {
+  color: #f2b71d;
+}
+
+.base {
+  color: #fff;
+}
+
 body {
   font-size: 1rem;
+  font-family: "Roboto", serif;
+  color: #252525;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto Slab", serif;
 }
 
 header {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: "Roboto Slab", serif;
+  padding: 3rem;
 }
 header .logo {
   flex-basis: 240px;
@@ -59,7 +80,7 @@ header nav .menu {
 }
 header nav .menu li {
   position: relative;
-  padding: 0 calc(1rem* 0.75);
+  padding: 0 0.75rem;
 }
 header nav .menu li .new {
   color: #fff;
@@ -74,8 +95,87 @@ header nav .menu li .new {
   left: 50%;
 }
 header nav .menu__social {
-  margin-left: calc(1rem* 1.5);
+  margin-left: 1.5rem;
 }
 header nav .menu__social li {
-  padding: 0 calc(1rem* 0.5);
+  padding: 0 0.5rem;
+}
+
+.jumbotron {
+  background-image: url("../../dist/images/slide-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 800px;
+}
+.jumbotron .teaser {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+}
+.jumbotron .teaser h1 {
+  font-size: calc(1rem* 4);
+  margin-bottom: 1.5rem;
+  max-width: 20ch;
+  line-height: 1.1;
+}
+.jumbotron .teaser p {
+  max-width: 55ch;
+  line-height: 2;
+}
+.jumbotron .sale-banner {
+  padding: 3.5rem;
+  border-radius: 10px;
+  background-color: #f2b71d;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+}
+.jumbotron .sale-banner h2 {
+  margin-bottom: 2rem;
+  font-size: calc(1rem* 2);
+}
+.jumbotron .sale-banner .sale-form {
+  flex-basis: 50%;
+}
+.jumbotron .sale-banner .sale-form .subscribe {
+  position: relative;
+}
+.jumbotron .sale-banner .sale-form input {
+  width: 85%;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  vertical-align: middle;
+  padding: 1rem;
+}
+.jumbotron .sale-banner .sale-form .btn {
+  border-radius: 25px;
+  padding: 0 1rem;
+  cursor: pointer;
+  font-family: "Roboto Slab", serif;
+  text-transform: uppercase;
+  font-size: calc(1rem* 0.85);
+  position: absolute;
+  top: 0;
+  left: 85%;
+  transform: translateX(-50%);
+  line-height: 47px;
+  color: #fff;
+  background-color: #0d2229;
+}
+.jumbotron .countdown {
+  flex-basis: 40%;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+}
+.jumbotron .countdown > div {
+  font-size: calc(1rem* 1.25);
+}
+.jumbotron .countdown .time {
+  font-size: calc(1rem* 4);
+  color: #fff;
 }
