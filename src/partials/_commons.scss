@@ -58,6 +58,8 @@ body {
 	font-size: $font_size;
 	font-family: $base_font;
 	color: $primary;
+	background-color: $base;
+	line-height: 2;
 }
 
 h1,
@@ -65,4 +67,5 @@ h2,
 h3,
 h4 {
 	font-family: $brand_font;
+	line-height: 1.5;
 }

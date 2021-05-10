@@ -1,0 +1,18 @@
+.author {
+	@include container;
+	padding: 12rem 0 4rem;
+	.intro {
+		padding: 1rem;
+		h2 {
+			max-width: 23ch;
+			font-size: calc(#{$font-size}* 2);
+		}
+		.signature {
+			width: 50%;
+			margin: 2rem 2rem 2rem auto;
+		}
+	}
+	.vision {
+		max-width: 68ch;
+	}
+}

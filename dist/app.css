@@ -54,6 +54,8 @@ body {
   font-size: 1rem;
   font-family: "Roboto", serif;
   color: #252525;
+  background-color: #fff;
+  line-height: 2;
 }
 
 h1,
@@ -61,6 +63,7 @@ h2,
 h3,
 h4 {
   font-family: "Roboto Slab", serif;
+  line-height: 1.5;
 }
 
 header {
@@ -178,4 +181,24 @@ header nav .menu__social li {
 .jumbotron .countdown .time {
   font-size: calc(1rem* 4);
   color: #fff;
+}
+
+.author {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 12rem 0 4rem;
+}
+.author .intro {
+  padding: 1rem;
+}
+.author .intro h2 {
+  max-width: 23ch;
+  font-size: calc(1rem* 2);
+}
+.author .intro .signature {
+  width: 50%;
+  margin: 2rem 2rem 2rem auto;
+}
+.author .vision {
+  max-width: 68ch;
 }
