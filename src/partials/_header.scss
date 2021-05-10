@@ -8,13 +8,7 @@ header {
 		flex-basis: 240px;
 	}
 	nav {
-		display: flex;
-		justify-content: space-between;
-		align-items: baseline;
-
 		.menu {
-			display: flex;
-			justify-content: space-between;
 			font-weight: bold;
 			li {
 				position: relative;
@@ -22,9 +16,10 @@ header {
 				.new {
 					color: $base;
 					background-color: $featured;
-					padding: 2px 3px;
-					font-size: 0.5rem;
-					border-radius: 5px;
+					padding: 2px 4px 3px
+					font-size: calc(#{$font_size}* 0.5);
+					font-weight: 300;
+					border-radius: 3px;
 					border-bottom-left-radius: 0;
 					position: absolute;
 					bottom: 100%;
