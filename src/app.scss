@@ -1,6 +1,4 @@
 @import "partials/variables";
+@import "partials/mixins";
 @import "partials/commons";
-
-body {
-	background-color: $primary;
-}
+@import "partials/header";

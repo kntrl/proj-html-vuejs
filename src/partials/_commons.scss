@@ -1,2 +1,30 @@
-//Typography
+//Resets
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
+ul {
+	list-style-type: none;
+}
+
+img {
+	width: 100%;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+//Typography
+.txt-center {
+	text-align: center;
+}
+
+//GLOBAL
+body {
+	font-size: $font_size;
+}

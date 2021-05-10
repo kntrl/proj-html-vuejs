@@ -1,0 +1,43 @@
+header {
+	@include container;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: $brand_font;
+	.logo {
+		flex-basis: 240px;
+	}
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+
+		.menu {
+			display: flex;
+			justify-content: space-between;
+			font-weight: bold;
+			li {
+				position: relative;
+				padding: 0 calc(#{$base_spacing}* 0.75);
+				.new {
+					color: $base;
+					background-color: $featured;
+					padding: 2px 3px;
+					font-size: 0.5rem;
+					border-radius: 5px;
+					border-bottom-left-radius: 0;
+					position: absolute;
+					bottom: 100%;
+					left: 50%;
+				}
+			}
+
+			&__social {
+				margin-left: calc(#{$base_spacing}* 1.5);
+				li {
+					padding: 0 calc(#{$base_spacing}* 0.5);
+				}
+			}
+		}
+	}
+}
