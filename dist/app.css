@@ -31,14 +31,18 @@ a:hover {
 }
 
 .flex.evenly {
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .flex.around {
   justify-content: space-around;
 }
 
-.flex.center {
+.flex.ju-center {
+  justify-content: center;
+}
+
+.flex.it-center {
   align-items: center;
 }
 
@@ -74,8 +78,6 @@ header {
   max-width: 1170px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-family: "Roboto Slab", serif;
   padding: 3rem;
 }
@@ -92,14 +94,14 @@ header nav .menu li {
 header nav .menu li .new {
   color: #fff;
   background-color: #be43cd;
-  padding: 2px 4px 3px;
+  padding: 0 4px;
   font-size: calc(1rem* 0.5);
   font-weight: 300;
   border-radius: 3px;
   border-bottom-left-radius: 0;
   position: absolute;
-  bottom: 100%;
-  left: 50%;
+  bottom: 90%;
+  right: 0%;
 }
 header nav .menu__social {
   margin-left: 1.5rem;
@@ -109,9 +111,9 @@ header nav .menu__social li {
 }
 
 .jumbotron {
-  background-image: url("../../dist/images/slide-1.jpg");
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../dist/images/slide-1.jpg");
   position: relative;
   height: 800px;
 }
@@ -158,10 +160,11 @@ header nav .menu__social li {
   border-radius: 25px;
   vertical-align: middle;
   padding: 1rem;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.15);
 }
 .jumbotron .sale-banner .sale-form .btn {
   border-radius: 25px;
-  padding: 0 1rem;
+  padding: 0.63rem 1rem;
   cursor: pointer;
   font-family: "Roboto Slab", serif;
   text-transform: uppercase;
@@ -170,9 +173,8 @@ header nav .menu__social li {
   top: 0;
   left: 85%;
   transform: translateX(-50%);
-  line-height: 47px;
   color: #fff;
-  background-color: #0d2229;
+  background-color: #2d4649;
 }
 .jumbotron .countdown {
   flex-basis: 40%;
@@ -211,6 +213,10 @@ header nav .menu__social li {
   background-image: url("../../dist/images/photo-1475452779376-caebfb988090-740x400.jpeg");
 }
 
+section h2 {
+  font-size: 3rem;
+}
+
 .author {
   max-width: 1170px;
   margin: 0 auto;
@@ -219,7 +225,7 @@ header nav .menu__social li {
 .author .intro {
   padding: 1rem;
 }
-.author .intro h2 {
+.author .intro h3 {
   max-width: 23ch;
   font-size: calc(1rem* 2);
 }
@@ -232,15 +238,12 @@ header nav .menu__social li {
 }
 
 .courses {
-  background-color: #e4e7e7;
+  background-color: #edf2f5;
   padding: 4rem 0.5rem;
 }
 .courses .container {
   max-width: 1170px;
   margin: 0 auto;
-}
-.courses h2 {
-  font-size: 3rem;
 }
 .courses .cards-list {
   padding-top: 3rem;
@@ -253,11 +256,11 @@ header nav .menu__social li {
   display: block;
 }
 .courses .cards-list .thumb {
-  height: 250px;
-  position: relative;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  height: 250px;
+  position: relative;
 }
 .courses .cards-list .thumb .layover {
   position: absolute;
@@ -278,6 +281,18 @@ header nav .menu__social li {
   font-family: "Roboto Slab", serif;
   color: #fff;
 }
+.courses .cards-list .thumb .featured {
+  font-family: "Roboto Slab", serif;
+  font-size: 0.65rem;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #ebb024;
+  position: absolute;
+  padding: 2px 4px;
+  top: 8px;
+  right: 8px;
+  border-radius: 3px;
+}
 .courses .cards-list .desc {
   background-color: #fff;
   border: 1px solid #bcbcbc;
@@ -297,9 +312,87 @@ header nav .menu__social li {
 .courses .cards-list .desc .info {
   padding-top: 1rem;
   font-size: calc(1rem* 0.75);
-  border-top: 1px solid #e4e7e7;
+  border-top: 1px solid #edf2f5;
 }
 .courses .cards-list .desc .icon {
   color: #f2b71d;
   padding: 5px;
+}
+.courses .cards-list .pagination {
+  padding: 3rem;
+  flex-basis: 100%;
+}
+.courses .cards-list .pagination .btn {
+  border-radius: 25px;
+  padding: 0.63rem 1rem;
+  cursor: pointer;
+  font-family: "Roboto Slab", serif;
+  text-transform: uppercase;
+  font-size: calc(1rem* 0.85);
+  padding: 1rem 2rem;
+  background-color: #f2b71d;
+  color: #fff;
+  font-weight: bold;
+}
+
+.book {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../dist/images/slider_1-1917x607-1914x606.jpg");
+  padding-top: 2rem;
+  overflow: hidden;
+}
+.book .promo {
+  padding: 2rem 0 0 1rem;
+}
+.book .promo h2 {
+  font-family: "Roboto", serif;
+  color: #f2b71d;
+  max-width: 25ch;
+  line-height: 1.1;
+}
+.book .promo p {
+  margin: 2rem auto;
+  color: #fff;
+  font-size: calc(1rem* 1.75);
+  max-width: 40ch;
+}
+.book .promo img {
+  width: auto;
+}
+.book .image {
+  align-self: flex-end;
+}
+.book .image img {
+  display: block;
+  width: auto;
+  position: relative;
+  bottom: -20px;
+  left: -100px;
+}
+
+.why {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 4rem 0.5rem;
+}
+.why .card {
+  flex-basis: 48%;
+  margin: 1rem 1%;
+  padding: 2rem;
+  border-left: 5px solid #f2b71d;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05);
+}
+.why .card .icon {
+  color: #f2b71d;
+  font-size: calc(1rem* 3);
+  padding-right: 2rem;
+}
+.why .card h3 {
+  font-size: calc(1rem* 1.5);
+}
+.why .card p {
+  margin-top: 1rem;
+  font-size: calc(1rem* 0.9);
+  color: #6b6b6b;
 }

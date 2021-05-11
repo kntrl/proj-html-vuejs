@@ -1,9 +1,14 @@
+section {
+	h2 {
+		font-size: 3rem;
+	}
+}
 .author {
 	@include container;
 	padding: 12rem 0 4rem;
 	.intro {
 		padding: 1rem;
-		h2 {
+		h3 {
 			max-width: 23ch;
 			font-size: calc(#{$font-size}* 2);
 		}
@@ -23,9 +28,6 @@
 	.container {
 		@include container;
 	}
-	h2 {
-		font-size: 3rem;
-	}
 	.cards-list {
 		padding-top: 3rem;
 		.card {
@@ -36,11 +38,10 @@
 			display: block;
 		}
 		.thumb {
+			@include bg-cover;
+			background-position: center;
 			height: 250px;
 			position: relative;
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
 			.layover {
 				position: absolute;
 				display: none;
@@ -59,6 +60,19 @@
 				font-weight: bold;
 				font-family: $brand_font;
 				color: $base;
+			}
+			.featured {
+				font-family: $brand_font;
+				font-size: 0.65rem;
+				color: $base;
+				text-transform: uppercase;
+				background-color: #ebb024;
+
+				position: absolute;
+				padding: 2px 4px;
+				top: 8px;
+				right: 8px;
+				border-radius: 3px;
 			}
 		}
 		.desc {
@@ -85,6 +99,78 @@
 				color: $brand;
 				padding: 5px;
 			}
+		}
+		.pagination {
+			padding: 3rem;
+			flex-basis: 100%;
+			.btn {
+				@include big-button;
+				background-color: $brand;
+				color: $base;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.book {
+	@include bg-cover;
+	background-image: url("../../dist/images/slider_1-1917x607-1914x606.jpg");
+	padding-top: 2rem;
+	overflow: hidden;
+
+	.promo {
+		padding: 2rem 0 0 1rem;
+		h2 {
+			font-family: $base_font;
+			color: $brand;
+			max-width: 25ch;
+			line-height: 1.1;
+		}
+		p {
+			margin: 2rem auto;
+			color: $base;
+			font-size: calc(#{$font-size}* 1.75);
+			max-width: 40ch;
+		}
+		img {
+			width: auto;
+		}
+	}
+	.image {
+		align-self: flex-end;
+
+		img {
+			display: block;
+			width: auto;
+			position: relative;
+			bottom: -20px;
+			left: -100px;
+		}
+	}
+}
+
+.why {
+	@include container;
+	padding: 4rem 0.5rem;
+	.card {
+		flex-basis: 48%;
+		margin: 1rem 1%;
+		padding: 2rem;
+		border-left: 5px solid $brand;
+		box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05);
+		.icon {
+			color: $brand;
+			font-size: calc(#{$font-size}* 3);
+			padding-right: 2rem;
+		}
+		h3 {
+			font-size: calc(#{$font-size}* 1.5);
+		}
+		p {
+			margin-top: 1rem;
+			font-size: calc(#{$font-size}* 0.9);
+			color: #6b6b6b;
 		}
 	}
 }

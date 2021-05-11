@@ -5,9 +5,19 @@
 
 @mixin button {
 	border-radius: 25px;
-	padding: 0 1rem;
+	padding: 0.63rem 1rem;
 	cursor: pointer;
 	font-family: $brand_font;
 	text-transform: uppercase;
 	font-size: calc(#{$font-size}* 0.85);
+}
+
+@mixin big-button {
+	@include button;
+	padding: 1rem 2rem;
+}
+
+@mixin bg-cover {
+	background-repeat: no-repeat;
+	background-size: cover;
 }

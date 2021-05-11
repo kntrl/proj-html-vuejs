@@ -34,14 +34,17 @@ a:hover {
 	justify-content: space-between;
 }
 .flex.evenly {
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 
 .flex.around {
 	justify-content: space-around;
 }
+.flex.ju-center {
+	justify-content: center;
+}
 
-.flex.center {
+.flex.it-center {
 	align-items: center;
 }
 

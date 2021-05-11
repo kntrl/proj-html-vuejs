@@ -24,7 +24,7 @@
 	</head>
 	<body>
 		<!-- HEADER -->
-		<header class="flex between">
+		<header class="flex between it-center">
 			<!-- logo -->
 			<div class="logo">
 				<img src="dist/images/MasterStudy-1.svg" alt="MasterStudy - Logo" />
@@ -35,10 +35,12 @@
 				<ul class="menu flex between">
 					<li><a href="">Courses</a></li>
 					<li><a href="">Courses Formats</a></li>
-					<li><a href="">Add Course</a></li>
+					<li>
+						<a href="">Add Course</a>
+						<div class="new txt-center">NEW</div>
+					</li>
 					<li>
 						<a href="">Pages</a>
-						<div class="new txt-center">NEW</div>
 					</li>
 					<li><a href="">Demos</a></li>
 				</ul>
@@ -74,7 +76,7 @@
 				</div>
 
 				<!-- sale-banner -->
-				<div class="sale-banner around flex center">
+				<div class="sale-banner around flex it-center">
 					<!-- sale-form -->
 					<div class="sale-form">
 						<h2><span class="base">Limited Sale:</span> All courses with 55% off</h2>
@@ -113,9 +115,9 @@
 			<!-- Author Vision section -->
 			<section class="author flex around">
 				<div class="intro">
-					<h2>
+					<h3>
 						Hey there, my name is John Doe. I'm the founder of the Brain Academy.
-					</h2>
+					</h3>
 					<div class="signature">
 						<img src="dist/images/sign.jpg" alt="John Doe Signature" />
 					</div>
@@ -143,15 +145,15 @@
 						<!-- single card -->
 						<div class="card">
 							<div class="thumb" id="course1">
-								<div class="featured"></div>
 								<div class="layover">
 									<div class="price">$59</div>
 								</div>
+								<div class="featured">Special</div>
 							</div>
 							<div class="desc txt-center">
 								<h3>How to be a DJ? Make Electronic Music</h3>
 								<div class="category">Electronic</div>
-								<div class="info flex between center">
+								<div class="info flex between it-center">
 									<div class="skill">
 										<span class="icon"> <i class="fas fa-signal"></i></span> Advanced
 									</div>
@@ -167,15 +169,15 @@
 						<!-- single card -->
 						<div class="card">
 							<div class="thumb" id="course2">
-								<div class="featured"></div>
 								<div class="layover">
 									<div class="price">$59</div>
 								</div>
+								<div class="featured">Special</div>
 							</div>
 							<div class="desc txt-center">
 								<h3>Nvidia and UE4 Technologies Practice</h3>
 								<div class="category">Nvidia</div>
-								<div class="info flex between center">
+								<div class="info flex between it-center">
 									<div class="skill">
 										<span class="icon"> <i class="fas fa-signal"></i></span> Advanced
 									</div>
@@ -191,15 +193,15 @@
 						<!-- single card -->
 						<div class="card">
 							<div class="thumb" id="course3">
-								<div class="featured"></div>
 								<div class="layover">
 									<div class="price">$59</div>
 								</div>
+								<div class="featured">Special</div>
 							</div>
 							<div class="desc txt-center">
 								<h3>Fashion Photography from professional</h3>
 								<div class="category">Fashion</div>
-								<div class="info flex between center">
+								<div class="info flex between it-center">
 									<div class="skill">
 										<span class="icon"> <i class="fas fa-signal"></i></span> Advanced
 									</div>
@@ -215,7 +217,6 @@
 						<!-- single card -->
 						<div class="card">
 							<div class="thumb" id="course4">
-								<div class="featured"></div>
 								<div class="layover">
 									<div class="price">$59</div>
 								</div>
@@ -223,7 +224,7 @@
 							<div class="desc txt-center">
 								<h3>Design Instruments for Communication</h3>
 								<div class="category">Communication</div>
-								<div class="info flex between center">
+								<div class="info flex between it-center">
 									<div class="skill">
 										<span class="icon"> <i class="fas fa-signal"></i></span> Intermediate
 									</div>
@@ -239,7 +240,6 @@
 						<!-- single card -->
 						<div class="card">
 							<div class="thumb" id="course5">
-								<div class="featured"></div>
 								<div class="layover">
 									<div class="price">$59</div>
 								</div>
@@ -247,7 +247,7 @@
 							<div class="desc txt-center">
 								<h3>Make your Concept Right and Beautiful</h3>
 								<div class="category">Art</div>
-								<div class="info flex between center">
+								<div class="info flex between it-center">
 									<div class="skill">
 										<span class="icon"> <i class="fas fa-signal"></i></span> Intermediate
 									</div>
@@ -263,7 +263,6 @@
 						<!-- single card -->
 						<div class="card">
 							<div class="thumb" id="course6">
-								<div class="featured"></div>
 								<div class="layover">
 									<div class="price">$59</div>
 								</div>
@@ -271,7 +270,7 @@
 							<div class="desc txt-center">
 								<h3>Road Bike Manual or How to Be a Champion</h3>
 								<div class="category">Electronic</div>
-								<div class="info flex between center">
+								<div class="info flex between it-center">
 									<div class="skill">
 										<span class="icon"> <i class="fas fa-signal"></i></span> Beginner
 									</div>
@@ -284,16 +283,90 @@
 								</div>
 							</div>
 						</div>
+						<div class="pagination txt-center">
+							<a href="" class="btn">load more</a>
+						</div>
 					</div>
 				</div>
 			</section>
 
 			<!-- Book section -->
-			<div class="book-adv">book adv</div>
+			<section class="book">
+				<div class="book-adv flex ju-center">
+					<div class="promo txt-center">
+						<h2>Get my Exclusive Investing Book just for $19.50</h2>
+						<p>
+							<em
+								>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+								cupiditate perspiciatis at culpa hic recusandae?</em
+							>
+						</p>
+						<img src="dist/images/amazon.png" alt="Order now at amazon.com" />
+					</div>
+					<div class="image">
+						<div class="holder">
+							<img src="dist/images/book.png" alt="MasterStudy Book" />
+						</div>
+					</div>
+				</div>
+			</section>
 			<!-- Book section Ends-->
 
 			<!-- WHY section -->
-			<section class="why">why my courses</section>
+			<section class="why">
+				<h2 class="txt-center">Why my Courses?</h2>
+				<!-- card list -->
+				<div class="cards-list flex between wrap">
+					<!-- single card -->
+					<div class="card flex between">
+						<div class="icon"><i class="fas fa-briefcase"></i></div>
+						<div class="desc">
+							<h3>Entrepreneurship</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet maxime
+								quod deserunt ullam qui veritatis quisquam, debitis inventore,
+								praesentium, et aspernatur dignissimos. Pariatur, veritatis praesentium.
+							</p>
+						</div>
+					</div>
+					<!-- single card -->
+					<div class="card flex between">
+						<div class="icon"><i class="fas fa-rocket"></i></div>
+						<div class="desc">
+							<h3>Accellerated learning</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet maxime
+								quod deserunt ullam qui veritatis quisquam, debitis inventore,
+								praesentium, et aspernatur dignissimos. Pariatur, veritatis praesentium.
+							</p>
+						</div>
+					</div>
+					<!-- single card -->
+					<div class="card flex between">
+						<div class="icon"><i class="far fa-thumbs-up"></i></div>
+						<div class="desc">
+							<h3>Productivity</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet maxime
+								quod deserunt ullam qui veritatis quisquam, debitis inventore,
+								praesentium, et aspernatur dignissimos. Pariatur, veritatis praesentium.
+							</p>
+						</div>
+					</div>
+					<!-- single card -->
+					<div class="card flex between">
+						<div class="icon"><i class="fas fa-cog"></i></div>
+						<div class="desc">
+							<h3>Life Coaching</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet maxime
+								quod deserunt ullam qui veritatis quisquam, debitis inventore,
+								praesentium, et aspernatur dignissimos. Pariatur, veritatis praesentium.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 			<!-- WHY section Ends-->
 
 			<!-- Stats section-->

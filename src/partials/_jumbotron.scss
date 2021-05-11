@@ -1,7 +1,6 @@
 .jumbotron {
+	@include bg-cover;
 	background-image: url("../../dist/images/slide-1.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
 	position: relative;
 	height: 800px;
 	.teaser {
@@ -45,6 +44,7 @@
 				border-radius: 25px;
 				vertical-align: middle;
 				padding: 1rem;
+				box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.15);
 			}
 
 			.btn {
@@ -53,9 +53,8 @@
 				top: 0;
 				left: 85%;
 				transform: translateX(-50%);
-				line-height: 47px;
 				color: $base;
-				background-color: $tertiary;
+				background-color: #2d4649;
 			}
 		}
 	}

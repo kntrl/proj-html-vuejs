@@ -1,8 +1,6 @@
 header {
 	@include container;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	font-family: $brand_font;
 	padding: 3rem;
 	.logo {
@@ -17,14 +15,14 @@ header {
 				.new {
 					color: $base;
 					background-color: $featured;
-					padding: 2px 4px 3px;
+					padding: 0 4px;
 					font-size: calc(#{$font_size}* 0.5);
 					font-weight: 300;
 					border-radius: 3px;
 					border-bottom-left-radius: 0;
 					position: absolute;
-					bottom: 100%;
-					left: 50%;
+					bottom: 90%;
+					right: 0%;
 				}
 			}
 
