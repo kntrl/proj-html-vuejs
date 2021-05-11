@@ -16,3 +16,53 @@
 		max-width: 68ch;
 	}
 }
+
+.courses {
+	background-color: $secondary;
+	padding: 4rem 0.5rem;
+	.container {
+		@include container;
+	}
+	h2 {
+		font-size: 3rem;
+	}
+	.cards-list {
+		padding-top: 3rem;
+		.card {
+			flex-basis: 31%;
+			margin: 1rem 1%;
+		}
+		.thumb {
+			height: 250px;
+			position: relative;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.desc {
+			background-color: $base;
+			border: 1px solid $border;
+			border-top: none;
+			padding: 1rem;
+			h3 {
+				font-size: calc(#{$font-size}* 1.25);
+				margin: 1rem auto;
+				max-width: 30ch;
+			}
+			.category {
+				color: $border;
+				margin-bottom: 1rem;
+				font-size: calc(#{$font-size}* 1);
+			}
+			.info {
+				padding-top: 1rem;
+				font-size: calc(#{$font-size}* 0.75);
+				border-top: 1px solid $secondary;
+			}
+			.icon {
+				color: $brand;
+				padding: 5px;
+			}
+		}
+	}
+}

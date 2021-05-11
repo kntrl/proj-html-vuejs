@@ -42,6 +42,10 @@ a:hover {
   align-items: center;
 }
 
+.flex.wrap {
+  flex-wrap: wrap;
+}
+
 .brand {
   color: #f2b71d;
 }
@@ -183,6 +187,10 @@ header nav .menu__social li {
   color: #fff;
 }
 
+#course1 {
+  background-image: url("../../dist/images/photo-1496307042754-b4aa456c4a2d-740x400.jpeg");
+}
+
 .author {
   max-width: 1170px;
   margin: 0 auto;
@@ -201,4 +209,55 @@ header nav .menu__social li {
 }
 .author .vision {
   max-width: 68ch;
+}
+
+.courses {
+  background-color: #e4e7e7;
+  padding: 4rem 0.5rem;
+}
+.courses .container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.courses h2 {
+  font-size: 3rem;
+}
+.courses .cards-list {
+  padding-top: 3rem;
+}
+.courses .cards-list .card {
+  flex-basis: 31%;
+  margin: 1rem 1%;
+}
+.courses .cards-list .thumb {
+  height: 250px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.courses .cards-list .desc {
+  background-color: #fff;
+  border: 1px solid #bcbcbc;
+  border-top: none;
+  padding: 1rem;
+}
+.courses .cards-list .desc h3 {
+  font-size: calc(1rem* 1.25);
+  margin: 1rem auto;
+  max-width: 30ch;
+}
+.courses .cards-list .desc .category {
+  color: #bcbcbc;
+  margin-bottom: 1rem;
+  font-size: calc(1rem* 1);
+}
+.courses .cards-list .desc .info {
+  padding-top: 1rem;
+  font-size: calc(1rem* 0.75);
+  border-top: 1px solid #e4e7e7;
+}
+.courses .cards-list .desc .icon {
+  color: #f2b71d;
+  padding: 5px;
 }
