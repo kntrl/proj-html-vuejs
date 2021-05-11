@@ -191,6 +191,26 @@ header nav .menu__social li {
   background-image: url("../../dist/images/photo-1496307042754-b4aa456c4a2d-740x400.jpeg");
 }
 
+#course2 {
+  background-image: url("../../dist/images/12345-1-740x400.png");
+}
+
+#course3 {
+  background-image: url("../../dist/images/photo-1491897554428-130a60dd4757-740x400.jpeg");
+}
+
+#course4 {
+  background-image: url("../../dist/images/photo-1416339134316-0e91dc9ded92-740x400.jpeg");
+}
+
+#course5 {
+  background-image: url("../../dist/images/cathryn-lavery-67852-unsplash-740x400.jpg");
+}
+
+#course6 {
+  background-image: url("../../dist/images/photo-1475452779376-caebfb988090-740x400.jpeg");
+}
+
 .author {
   max-width: 1170px;
   margin: 0 auto;
@@ -229,12 +249,34 @@ header nav .menu__social li {
   flex-basis: 31%;
   margin: 1rem 1%;
 }
+.courses .cards-list .card:hover .layover {
+  display: block;
+}
 .courses .cards-list .thumb {
   height: 250px;
   position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+.courses .cards-list .thumb .layover {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(55, 56, 57, 0.8);
+}
+.courses .cards-list .thumb .price {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Roboto Slab", serif;
+  color: #fff;
 }
 .courses .cards-list .desc {
   background-color: #fff;
