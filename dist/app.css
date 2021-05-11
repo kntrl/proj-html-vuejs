@@ -396,3 +396,72 @@ section h2 {
   font-size: calc(1rem* 0.9);
   color: #6b6b6b;
 }
+
+.stats {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../dist/images/counter-1919x1101.jpg");
+  background-position: top;
+}
+.stats .container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 14rem 0.5rem;
+}
+.stats .container .stat {
+  flex-basis: 23%;
+  margin: 0 1%;
+  font-family: "Roboto Slab", serif;
+  line-height: 1.4;
+}
+.stats .container .stat .icon {
+  color: #fff;
+  font-size: calc(1rem* 4);
+  padding-right: 1rem;
+}
+.stats .container .stat .value {
+  color: #f2b71d;
+  font-size: calc(1rem* 2.5);
+  font-weight: bold;
+}
+.stats .container .stat span {
+  color: #fff;
+}
+
+.reviews {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 4rem 0.5rem;
+}
+.reviews .review-slider {
+  width: 80%;
+  margin: 2rem auto 1rem;
+}
+.reviews .review-slider .arrow {
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+.reviews .review-slider .user-pic {
+  margin-bottom: 1rem;
+}
+.reviews .review-slider .user-pic .pic {
+  margin: 0 1rem;
+  width: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.reviews .review-slider .user-pic .pic__active {
+  width: 100px;
+}
+.reviews .review-slider .user-pic .pic img {
+  display: block;
+}
+.reviews .review-slider .score {
+  color: #f2b71d;
+}
+.reviews .review-slider p {
+  font-size: calc(1rem* 1.15);
+  max-width: 70ch;
+  margin: 2rem auto 0;
+}

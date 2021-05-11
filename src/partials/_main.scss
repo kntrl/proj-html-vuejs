@@ -174,3 +174,72 @@ section {
 		}
 	}
 }
+
+.stats {
+	@include bg-cover;
+	background-image: url("../../dist/images/counter-1919x1101.jpg");
+	background-position: top;
+	.container {
+		@include container;
+		padding: 14rem 0.5rem;
+		.stat {
+			flex-basis: 23%;
+			margin: 0 1%;
+			font-family: $brand_font;
+			line-height: 1.4;
+
+			.icon {
+				color: $base;
+				font-size: calc(#{$font-size}* 4);
+				padding-right: 1rem;
+			}
+			.value {
+				color: $brand;
+				font-size: calc(#{$font-size}* 2.5);
+				font-weight: bold;
+			}
+			span {
+				color: $base;
+			}
+		}
+	}
+}
+
+.reviews {
+	@include container;
+	padding: 4rem 0.5rem;
+	.review-slider {
+		width: 80%;
+		margin: 2rem auto 1rem;
+		.arrow {
+			font-size: 1.5rem;
+			padding: 0 1rem;
+			cursor: pointer;
+		}
+
+		.user-pic {
+			margin-bottom: 1rem;
+			.pic {
+				margin: 0 1rem;
+				width: 70px;
+				border-radius: 50%;
+				overflow: hidden;
+				&__active {
+					width: 100px;
+				}
+				img {
+					display: block;
+				}
+			}
+		}
+
+		.score {
+			color: $brand;
+		}
+		p {
+			font-size: calc(#{$font-size}* 1.15);
+			max-width: 70ch;
+			margin: 2rem auto 0;
+		}
+	}
+}
