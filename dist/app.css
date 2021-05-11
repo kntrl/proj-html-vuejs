@@ -39,7 +39,7 @@ a:hover {
 }
 
 .flex.center {
-  align-content: center;
+  align-items: center;
 }
 
 .brand {
@@ -128,7 +128,7 @@ header nav .menu__social li {
   line-height: 2;
 }
 .jumbotron .sale-banner {
-  padding: 3.5rem;
+  padding: 2rem;
   border-radius: 10px;
   background-color: #f2b71d;
   position: absolute;

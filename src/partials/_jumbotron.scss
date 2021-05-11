@@ -21,7 +21,7 @@
 		}
 	}
 	.sale-banner {
-		padding: 3.5rem;
+		padding: 2rem;
 		border-radius: 10px;
 		background-color: $brand;
 		position: absolute;
@@ -63,9 +63,7 @@
 		flex-basis: 40%;
 		font-family: $brand_font;
 		font-weight: bold;
-
 		> div {
-			// padding: 0 1rem;
 			font-size: calc(#{$font-size}* 1.25);
 		}
 		.time {
