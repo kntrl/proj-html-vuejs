@@ -79,7 +79,7 @@ header {
   margin: 0 auto;
   display: flex;
   font-family: "Roboto Slab", serif;
-  padding: 3rem;
+  padding: 3rem 0 2.5rem;
 }
 header .logo {
   flex-basis: 240px;
@@ -89,7 +89,7 @@ header nav .menu {
 }
 header nav .menu li {
   position: relative;
-  padding: 0 0.75rem;
+  padding: 0 0.75rem 0.5rem;
 }
 header nav .menu li .new {
   color: #fff;
@@ -102,6 +102,25 @@ header nav .menu li .new {
   position: absolute;
   bottom: 90%;
   right: 0%;
+}
+header nav .menu li:hover .hover {
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border-bottom: 3px solid #f2b71d;
+  transform: translateX(-50%);
+}
+header nav .menu li:hover .triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #f2b71d;
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 header nav .menu__social {
   margin-left: 1.5rem;

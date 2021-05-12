@@ -2,7 +2,7 @@ header {
 	@include container;
 	display: flex;
 	font-family: $brand_font;
-	padding: 3rem;
+	padding: 3rem 0 2.5rem;
 	.logo {
 		flex-basis: 240px;
 	}
@@ -11,7 +11,7 @@ header {
 			font-weight: bold;
 			li {
 				position: relative;
-				padding: 0 0.75rem;
+				padding: 0 0.75rem 0.5rem;
 				.new {
 					color: $base;
 					background-color: $featured;
@@ -25,7 +25,27 @@ header {
 					right: 0%;
 				}
 			}
-
+			li:hover {
+				.hover {
+					width: 50%;
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					border-bottom: 3px solid $brand;
+					transform: translateX(-50%);
+				}
+				.triangle {
+					position: absolute;
+					width: 0;
+					height: 0;
+					border-left: 5px solid transparent;
+					border-right: 5px solid transparent;
+					border-bottom: 5px solid $brand;
+					bottom: 1px;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
 			&__social {
 				margin-left: 1.5rem;
 				li {

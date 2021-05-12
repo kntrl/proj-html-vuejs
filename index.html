@@ -33,9 +33,12 @@
 				<!-- NAV -->
 				<nav class="flex between">
 					<!-- site menu -->
-					<ul class="menu flex between">
+					<ul class="menu menu__main flex between">
 						<li v-for="link in topNavMenu">
 							<a :href="`${link.href}`">{{link.text}}</a>
+							<div class="hover"></div>
+							<div class="triangle"></div>
+
 							<div v-if="link.featured" class="new txt-center">NEW</div>
 						</li>
 					</ul>
