@@ -1,0 +1,54 @@
+footer {
+	background-color: $brand;
+	line-height: 1.5;
+	padding: 4rem 0.5rem 1rem;
+	.sitemap {
+		@include container;
+		> div {
+			flex-basis: 24%;
+		}
+		h3 {
+			text-transform: uppercase;
+			font-size: calc(#{$font-size}* 1.25);
+			margin-bottom: 1rem;
+		}
+		p {
+			padding: 1rem 0;
+		}
+		ul {
+			&.social {
+				font-size: calc(#{$font-size}* 1.25);
+				li:not(:last-child) {
+					padding-right: 1rem;
+				}
+			}
+			&.page-list {
+				list-style-type: disc;
+				li {
+					font-family: $brand_font;
+					flex-basis: 50%;
+					padding-bottom: 1rem;
+				}
+			}
+			&.blog-feed {
+				li {
+					margin-bottom: 1rem;
+					img {
+						width: auto;
+					}
+					.desc {
+						padding-left: 1rem;
+					}
+					.date {
+						font-size: calc(#{$font-size}* 0.75);
+						color: #78787b;
+					}
+					.date::before {
+						border-bottom: 1px solid #78787b;
+						width: 5px;
+					}
+				}
+			}
+		}
+	}
+}

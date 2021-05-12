@@ -465,3 +465,55 @@ section h2 {
   max-width: 70ch;
   margin: 2rem auto 0;
 }
+
+footer {
+  background-color: #f2b71d;
+  line-height: 1.5;
+  padding: 4rem 0.5rem 1rem;
+}
+footer .sitemap {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+footer .sitemap > div {
+  flex-basis: 24%;
+}
+footer .sitemap h3 {
+  text-transform: uppercase;
+  font-size: calc(1rem* 1.25);
+  margin-bottom: 1rem;
+}
+footer .sitemap p {
+  padding: 1rem 0;
+}
+footer .sitemap ul.social {
+  font-size: calc(1rem* 1.25);
+}
+footer .sitemap ul.social li:not(:last-child) {
+  padding-right: 1rem;
+}
+footer .sitemap ul.page-list {
+  list-style-type: disc;
+}
+footer .sitemap ul.page-list li {
+  font-family: "Roboto Slab", serif;
+  flex-basis: 50%;
+  padding-bottom: 1rem;
+}
+footer .sitemap ul.blog-feed li {
+  margin-bottom: 1rem;
+}
+footer .sitemap ul.blog-feed li img {
+  width: auto;
+}
+footer .sitemap ul.blog-feed li .desc {
+  padding-left: 1rem;
+}
+footer .sitemap ul.blog-feed li .date {
+  font-size: calc(1rem* 0.75);
+  color: #78787b;
+}
+footer .sitemap ul.blog-feed li .date::before {
+  border-bottom: 1px solid #78787b;
+  width: 5px;
+}
