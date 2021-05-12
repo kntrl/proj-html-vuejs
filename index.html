@@ -23,530 +23,520 @@
 		<link rel="stylesheet" href="dist/app.css" />
 	</head>
 	<body>
-		<!-- HEADER -->
-		<header class="flex between it-center">
-			<!-- logo -->
-			<div class="logo">
-				<img src="dist/images/MasterStudy-1.svg" alt="MasterStudy - Logo" />
-			</div>
-			<!-- NAV -->
-			<nav class="flex between">
-				<!-- site menu -->
-				<ul class="menu flex between">
-					<li><a href="">Courses</a></li>
-					<li><a href="">Courses Formats</a></li>
-					<li>
-						<a href="">Add Course</a>
-						<div class="new txt-center">NEW</div>
-					</li>
-					<li>
-						<a href="">Pages</a>
-					</li>
-					<li><a href="">Demos</a></li>
-				</ul>
-				<!-- social menu -->
-				<ul class="menu flex menu__social">
-					<li>
-						<a href=""><i class="fab fa-linkedin"></i></a>
-					</li>
-					<li>
-						<a href=""><i class="fab fa-instagram"></i></a>
-					</li>
-					<li>
-						<a href=""><i class="fab fa-facebook"></i></a>
-					</li>
-					<li>
-						<a href=""><i class="fab fa-twitter"></i></a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-
-		<!-- MAIN -->
-		<main>
-			<!-- Jumbotron -->
-			<div class="jumbotron">
-				<!-- teaser -->
-				<div class="teaser">
-					<h1>Start your Human <span class="brand">Revolution</span> today</h1>
-					<p>
-						A wonderful serenity has taken possession of my enitore soul, like these
-						sweet morning of spring which I enjoy with my whole heart.
-					</p>
+		<div id="app">
+			<!-- HEADER -->
+			<header class="flex between it-center">
+				<!-- logo -->
+				<div class="logo">
+					<img src="dist/images/MasterStudy-1.svg" alt="MasterStudy - Logo" />
 				</div>
+				<!-- NAV -->
+				<nav class="flex between">
+					<!-- site menu -->
+					<ul class="menu flex between">
+						<li v-for="link in topNavMenu">
+							<a :href="`${link.href}`">{{link.text}}</a>
+							<div v-if="link.featured" class="new txt-center">NEW</div>
+						</li>
+					</ul>
+					<!-- social menu -->
+					<ul class="menu flex menu__social">
+						<li v-for="link in topNavSocial">
+							<a :href="`${link.href}`"
+								><i :class="`${link.iconFamily} ${link.iconName}`"></i
+							></a>
+						</li>
+					</ul>
+				</nav>
+			</header>
 
-				<!-- sale-banner -->
-				<div class="sale-banner around flex it-center">
-					<!-- sale-form -->
-					<div class="sale-form">
-						<h2><span class="base">Limited Sale:</span> All courses with 55% off</h2>
-						<div class="subscribe">
-							<input
-								aria-label="Enter email address"
-								placeholder="Enter your E-mail"
-								type="text"
-							/>
-							<a class="btn txt-center">Subscribe</a>
-						</div>
+			<!-- MAIN -->
+			<main>
+				<!-- Jumbotron -->
+				<div class="jumbotron">
+					<!-- teaser -->
+					<div class="teaser">
+						<h1>Start your Human <span class="brand">Revolution</span> today</h1>
+						<p>
+							A wonderful serenity has taken possession of my enitore soul, like these
+							sweet morning of spring which I enjoy with my whole heart.
+						</p>
 					</div>
-					<!-- sale countdown -->
-					<div class="countdown flex around txt-center">
-						<div class="days">
-							<div class="time">26</div>
-							Days
+
+					<!-- sale-banner -->
+					<div class="sale-banner around flex it-center">
+						<!-- sale-form -->
+						<div class="sale-form">
+							<h2><span class="base">Limited Sale:</span> All courses with 55% off</h2>
+							<div class="subscribe">
+								<input
+									aria-label="Enter email address"
+									placeholder="Enter your E-mail"
+									type="text"
+								/>
+								<a class="btn txt-center">Subscribe</a>
+							</div>
 						</div>
-						<div class="hours">
-							<div class="time">01</div>
-							Hours
-						</div>
-						<div class="minutes">
-							<div class="time">47</div>
-							Minuts
-						</div>
-						<div class="seconds">
-							<div class="time">35</div>
-							Seconds
+						<!-- sale countdown -->
+						<div class="countdown flex around txt-center">
+							<div class="days">
+								<div class="time">26</div>
+								Days
+							</div>
+							<div class="hours">
+								<div class="time">01</div>
+								Hours
+							</div>
+							<div class="minutes">
+								<div class="time">47</div>
+								Minuts
+							</div>
+							<div class="seconds">
+								<div class="time">35</div>
+								Seconds
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- Jumbotron Ends -->
+				<!-- Jumbotron Ends -->
 
-			<!-- Author Vision section -->
-			<section class="author flex around">
-				<div class="intro">
-					<h3>
-						Hey there, my name is John Doe. I'm the founder of the Brain Academy.
-					</h3>
-					<div class="signature">
-						<img src="dist/images/sign.jpg" alt="John Doe Signature" />
+				<!-- Author Vision section -->
+				<section class="author flex around">
+					<div class="intro">
+						<h3>
+							Hey there, my name is John Doe. I'm the founder of the Brain Academy.
+						</h3>
+						<div class="signature">
+							<img src="dist/images/sign.jpg" alt="John Doe Signature" />
+						</div>
 					</div>
-				</div>
-				<div class="vision">
-					<p>
-						A wonderful serenity has taken possession of my entire soul, like these
-						sweet mornings of spring which I enjoy with my whole heart. I am alone,
-						and feel the charm of existence in this spot, which was created for the
-						bliss of souls like mine. I am so happy, my dear friend, so absorbed in
-						the exquisite sense of mere tranquil existence, that I neglect my talents.
-						When, while the lovely valley teems with vapor around me, and the meridian
-						sun strikes the upper surface of the impenetrable foliage of my trees, and
-						but a few stray gleams steal into the innter sanctuary.
-					</p>
-				</div>
-			</section>
+					<div class="vision">
+						<p>
+							A wonderful serenity has taken possession of my entire soul, like these
+							sweet mornings of spring which I enjoy with my whole heart. I am alone,
+							and feel the charm of existence in this spot, which was created for the
+							bliss of souls like mine. I am so happy, my dear friend, so absorbed in
+							the exquisite sense of mere tranquil existence, that I neglect my
+							talents. When, while the lovely valley teems with vapor around me, and
+							the meridian sun strikes the upper surface of the impenetrable foliage of
+							my trees, and but a few stray gleams steal into the innter sanctuary.
+						</p>
+					</div>
+				</section>
 
-			<!-- Courses Section -->
-			<section class="courses">
-				<div class="container">
-					<h2 class="txt-center">New Courses</h2>
-					<!-- Card list -->
+				<!-- Courses Section -->
+				<section class="courses">
+					<div class="container">
+						<h2 class="txt-center">New Courses</h2>
+						<!-- Card list -->
+						<div class="cards-list flex between wrap">
+							<!-- single card -->
+							<div class="card">
+								<div class="thumb" id="course1">
+									<div class="layover">
+										<div class="price">$59</div>
+									</div>
+									<div class="featured">Special</div>
+								</div>
+								<div class="desc txt-center">
+									<h3>How to be a DJ? Make Electronic Music</h3>
+									<div class="category">Electronic</div>
+									<div class="info flex between it-center">
+										<div class="skill">
+											<span class="icon"> <i class="fas fa-signal"></i></span> Advanced
+										</div>
+										<div class="lectures">
+											<span class="icon"> <i class="fas fa-list"></i></span> 8 Lectures
+										</div>
+										<div class="duration">
+											<span class="icon"> <i class="far fa-clock"></i></span> 6 Hours
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- single card -->
+							<div class="card">
+								<div class="thumb" id="course2">
+									<div class="layover">
+										<div class="price">$59</div>
+									</div>
+									<div class="featured">Special</div>
+								</div>
+								<div class="desc txt-center">
+									<h3>Nvidia and UE4 Technologies Practice</h3>
+									<div class="category">Nvidia</div>
+									<div class="info flex between it-center">
+										<div class="skill">
+											<span class="icon"> <i class="fas fa-signal"></i></span> Advanced
+										</div>
+										<div class="lectures">
+											<span class="icon"> <i class="fas fa-list"></i></span> 8 Lectures
+										</div>
+										<div class="duration">
+											<span class="icon"> <i class="far fa-clock"></i></span> 6 Hours
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- single card -->
+							<div class="card">
+								<div class="thumb" id="course3">
+									<div class="layover">
+										<div class="price">$59</div>
+									</div>
+									<div class="featured">Special</div>
+								</div>
+								<div class="desc txt-center">
+									<h3>Fashion Photography from professional</h3>
+									<div class="category">Fashion</div>
+									<div class="info flex between it-center">
+										<div class="skill">
+											<span class="icon"> <i class="fas fa-signal"></i></span> Advanced
+										</div>
+										<div class="lectures">
+											<span class="icon"> <i class="fas fa-list"></i></span> 6 Lectures
+										</div>
+										<div class="duration">
+											<span class="icon"> <i class="far fa-clock"></i></span> 6 Hours
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- single card -->
+							<div class="card">
+								<div class="thumb" id="course4">
+									<div class="layover">
+										<div class="price">$59</div>
+									</div>
+								</div>
+								<div class="desc txt-center">
+									<h3>Design Instruments for Communication</h3>
+									<div class="category">Communication</div>
+									<div class="info flex between it-center">
+										<div class="skill">
+											<span class="icon"> <i class="fas fa-signal"></i></span> Intermediate
+										</div>
+										<div class="lectures">
+											<span class="icon"> <i class="fas fa-list"></i></span> 6 Lectures
+										</div>
+										<div class="duration">
+											<span class="icon"> <i class="far fa-clock"></i></span> 6 Hours
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- single card -->
+							<div class="card">
+								<div class="thumb" id="course5">
+									<div class="layover">
+										<div class="price">$59</div>
+									</div>
+								</div>
+								<div class="desc txt-center">
+									<h3>Make your Concept Right and Beautiful</h3>
+									<div class="category">Art</div>
+									<div class="info flex between it-center">
+										<div class="skill">
+											<span class="icon"> <i class="fas fa-signal"></i></span> Intermediate
+										</div>
+										<div class="lectures">
+											<span class="icon"> <i class="fas fa-list"></i></span> 6 Lectures
+										</div>
+										<div class="duration">
+											<span class="icon"> <i class="far fa-clock"></i></span> 6 Hours
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- single card -->
+							<div class="card">
+								<div class="thumb" id="course6">
+									<div class="layover">
+										<div class="price">$59</div>
+									</div>
+								</div>
+								<div class="desc txt-center">
+									<h3>Road Bike Manual or How to Be a Champion</h3>
+									<div class="category">Electronic</div>
+									<div class="info flex between it-center">
+										<div class="skill">
+											<span class="icon"> <i class="fas fa-signal"></i></span> Beginner
+										</div>
+										<div class="lectures">
+											<span class="icon"> <i class="fas fa-list"></i></span> 6 Lectures
+										</div>
+										<div class="duration">
+											<span class="icon"> <i class="far fa-clock"></i></span> 6 Hours
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="pagination txt-center">
+								<a href="" class="btn">load more</a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Book section -->
+				<section class="book">
+					<div class="book-adv flex ju-center">
+						<div class="promo txt-center">
+							<h2>Get my Exclusive Investing Book just for $19.50</h2>
+							<p>
+								<em
+									>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+									cupiditate perspiciatis at culpa hic recusandae?</em
+								>
+							</p>
+							<img src="dist/images/amazon.png" alt="Order now at amazon.com" />
+						</div>
+						<div class="image">
+							<div class="holder">
+								<img src="dist/images/book.png" alt="MasterStudy Book" />
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Book section Ends-->
+
+				<!-- WHY section -->
+				<section class="why">
+					<h2 class="txt-center">Why my Courses?</h2>
+					<!-- card list -->
 					<div class="cards-list flex between wrap">
 						<!-- single card -->
-						<div class="card">
-							<div class="thumb" id="course1">
-								<div class="layover">
-									<div class="price">$59</div>
-								</div>
-								<div class="featured">Special</div>
-							</div>
-							<div class="desc txt-center">
-								<h3>How to be a DJ? Make Electronic Music</h3>
-								<div class="category">Electronic</div>
-								<div class="info flex between it-center">
-									<div class="skill">
-										<span class="icon"> <i class="fas fa-signal"></i></span> Advanced
-									</div>
-									<div class="lectures">
-										<span class="icon"> <i class="fas fa-list"></i></span> 8 Lectures
-									</div>
-									<div class="duration">
-										<span class="icon"> <i class="far fa-clock"></i></span> 6 Hours
-									</div>
-								</div>
+						<div class="card flex between">
+							<div class="icon"><i class="fas fa-briefcase"></i></div>
+							<div class="desc">
+								<h3>Entrepreneurship</h3>
+								<p>
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet maxime
+									quod deserunt ullam qui veritatis quisquam, debitis inventore,
+									praesentium, et aspernatur dignissimos. Pariatur, veritatis
+									praesentium.
+								</p>
 							</div>
 						</div>
 						<!-- single card -->
-						<div class="card">
-							<div class="thumb" id="course2">
-								<div class="layover">
-									<div class="price">$59</div>
-								</div>
-								<div class="featured">Special</div>
-							</div>
-							<div class="desc txt-center">
-								<h3>Nvidia and UE4 Technologies Practice</h3>
-								<div class="category">Nvidia</div>
-								<div class="info flex between it-center">
-									<div class="skill">
-										<span class="icon"> <i class="fas fa-signal"></i></span> Advanced
-									</div>
-									<div class="lectures">
-										<span class="icon"> <i class="fas fa-list"></i></span> 8 Lectures
-									</div>
-									<div class="duration">
-										<span class="icon"> <i class="far fa-clock"></i></span> 6 Hours
-									</div>
-								</div>
+						<div class="card flex between">
+							<div class="icon"><i class="fas fa-rocket"></i></div>
+							<div class="desc">
+								<h3>Accellerated learning</h3>
+								<p>
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet maxime
+									quod deserunt ullam qui veritatis quisquam, debitis inventore,
+									praesentium, et aspernatur dignissimos. Pariatur, veritatis
+									praesentium.
+								</p>
 							</div>
 						</div>
 						<!-- single card -->
-						<div class="card">
-							<div class="thumb" id="course3">
-								<div class="layover">
-									<div class="price">$59</div>
-								</div>
-								<div class="featured">Special</div>
-							</div>
-							<div class="desc txt-center">
-								<h3>Fashion Photography from professional</h3>
-								<div class="category">Fashion</div>
-								<div class="info flex between it-center">
-									<div class="skill">
-										<span class="icon"> <i class="fas fa-signal"></i></span> Advanced
-									</div>
-									<div class="lectures">
-										<span class="icon"> <i class="fas fa-list"></i></span> 6 Lectures
-									</div>
-									<div class="duration">
-										<span class="icon"> <i class="far fa-clock"></i></span> 6 Hours
-									</div>
-								</div>
+						<div class="card flex between">
+							<div class="icon"><i class="far fa-thumbs-up"></i></div>
+							<div class="desc">
+								<h3>Productivity</h3>
+								<p>
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet maxime
+									quod deserunt ullam qui veritatis quisquam, debitis inventore,
+									praesentium, et aspernatur dignissimos. Pariatur, veritatis
+									praesentium.
+								</p>
 							</div>
 						</div>
 						<!-- single card -->
-						<div class="card">
-							<div class="thumb" id="course4">
-								<div class="layover">
-									<div class="price">$59</div>
-								</div>
+						<div class="card flex between">
+							<div class="icon"><i class="fas fa-cog"></i></div>
+							<div class="desc">
+								<h3>Life Coaching</h3>
+								<p>
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet maxime
+									quod deserunt ullam qui veritatis quisquam, debitis inventore,
+									praesentium, et aspernatur dignissimos. Pariatur, veritatis
+									praesentium.
+								</p>
 							</div>
-							<div class="desc txt-center">
-								<h3>Design Instruments for Communication</h3>
-								<div class="category">Communication</div>
-								<div class="info flex between it-center">
-									<div class="skill">
-										<span class="icon"> <i class="fas fa-signal"></i></span> Intermediate
-									</div>
-									<div class="lectures">
-										<span class="icon"> <i class="fas fa-list"></i></span> 6 Lectures
-									</div>
-									<div class="duration">
-										<span class="icon"> <i class="far fa-clock"></i></span> 6 Hours
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- single card -->
-						<div class="card">
-							<div class="thumb" id="course5">
-								<div class="layover">
-									<div class="price">$59</div>
-								</div>
-							</div>
-							<div class="desc txt-center">
-								<h3>Make your Concept Right and Beautiful</h3>
-								<div class="category">Art</div>
-								<div class="info flex between it-center">
-									<div class="skill">
-										<span class="icon"> <i class="fas fa-signal"></i></span> Intermediate
-									</div>
-									<div class="lectures">
-										<span class="icon"> <i class="fas fa-list"></i></span> 6 Lectures
-									</div>
-									<div class="duration">
-										<span class="icon"> <i class="far fa-clock"></i></span> 6 Hours
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- single card -->
-						<div class="card">
-							<div class="thumb" id="course6">
-								<div class="layover">
-									<div class="price">$59</div>
-								</div>
-							</div>
-							<div class="desc txt-center">
-								<h3>Road Bike Manual or How to Be a Champion</h3>
-								<div class="category">Electronic</div>
-								<div class="info flex between it-center">
-									<div class="skill">
-										<span class="icon"> <i class="fas fa-signal"></i></span> Beginner
-									</div>
-									<div class="lectures">
-										<span class="icon"> <i class="fas fa-list"></i></span> 6 Lectures
-									</div>
-									<div class="duration">
-										<span class="icon"> <i class="far fa-clock"></i></span> 6 Hours
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="pagination txt-center">
-							<a href="" class="btn">load more</a>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+				<!-- WHY section Ends-->
 
-			<!-- Book section -->
-			<section class="book">
-				<div class="book-adv flex ju-center">
-					<div class="promo txt-center">
-						<h2>Get my Exclusive Investing Book just for $19.50</h2>
-						<p>
-							<em
-								>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-								cupiditate perspiciatis at culpa hic recusandae?</em
-							>
-						</p>
-						<img src="dist/images/amazon.png" alt="Order now at amazon.com" />
-					</div>
-					<div class="image">
-						<div class="holder">
-							<img src="dist/images/book.png" alt="MasterStudy Book" />
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- Book section Ends-->
-
-			<!-- WHY section -->
-			<section class="why">
-				<h2 class="txt-center">Why my Courses?</h2>
-				<!-- card list -->
-				<div class="cards-list flex between wrap">
-					<!-- single card -->
-					<div class="card flex between">
-						<div class="icon"><i class="fas fa-briefcase"></i></div>
-						<div class="desc">
-							<h3>Entrepreneurship</h3>
-							<p>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet maxime
-								quod deserunt ullam qui veritatis quisquam, debitis inventore,
-								praesentium, et aspernatur dignissimos. Pariatur, veritatis praesentium.
-							</p>
-						</div>
-					</div>
-					<!-- single card -->
-					<div class="card flex between">
-						<div class="icon"><i class="fas fa-rocket"></i></div>
-						<div class="desc">
-							<h3>Accellerated learning</h3>
-							<p>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet maxime
-								quod deserunt ullam qui veritatis quisquam, debitis inventore,
-								praesentium, et aspernatur dignissimos. Pariatur, veritatis praesentium.
-							</p>
-						</div>
-					</div>
-					<!-- single card -->
-					<div class="card flex between">
-						<div class="icon"><i class="far fa-thumbs-up"></i></div>
-						<div class="desc">
-							<h3>Productivity</h3>
-							<p>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet maxime
-								quod deserunt ullam qui veritatis quisquam, debitis inventore,
-								praesentium, et aspernatur dignissimos. Pariatur, veritatis praesentium.
-							</p>
-						</div>
-					</div>
-					<!-- single card -->
-					<div class="card flex between">
-						<div class="icon"><i class="fas fa-cog"></i></div>
-						<div class="desc">
-							<h3>Life Coaching</h3>
-							<p>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet maxime
-								quod deserunt ullam qui veritatis quisquam, debitis inventore,
-								praesentium, et aspernatur dignissimos. Pariatur, veritatis praesentium.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- WHY section Ends-->
-
-			<!-- Stats section-->
-			<section class="stats">
-				<!-- stats container -->
-				<div class="container flex between it-center">
-					<!-- single stat -->
-					<div class="stat flex ju-center">
-						<div class="icon">
-							<i class="fas fa-user-friends"></i>
-						</div>
-						<div class="desc">
-							<div class="value">3195</div>
-							<span>Online Learner</span>
-						</div>
-					</div>
-					<!-- single stat -->
-					<div class="stat flex ju-center">
-						<div class="icon">
-							<i class="fas fa-film"></i>
-						</div>
-						<div class="desc">
-							<div class="value">23</div>
-							<span>Video Courses</span>
-						</div>
-					</div>
-					<!-- single stat -->
-					<div class="stat flex ju-center">
-						<div class="icon">
-							<i class="far fa-images"></i>
-						</div>
-						<div class="desc">
-							<div class="value">437</div>
-							<span>Video Courses</span>
-						</div>
-					</div>
-					<!-- single stat -->
-					<div class="stat flex ju-center">
-						<div class="icon">
-							<i class="far fa-thumbs-up"></i>
-						</div>
-						<div class="desc">
-							<div class="value">1440</div>
-							<span>Excellent Reviews</span>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- Stats section Ends-->
-
-			<!-- Reviews section-->
-			<section class="reviews txt-center">
-				<h2>What Students Say</h2>
-				<div class="review-slider">
-					<div class="pagination flex evenly it-center">
-						<div class="arrow"><i class="fas fa-arrow-left"></i></div>
-						<div class="user-pic flex it-center">
-							<div class="pic">
-								<img src="dist/images/1-100x100.jpg" alt="" />
-							</div>
-							<div class="pic pic__active">
-								<img src="dist/images/2-100x100.jpg" alt="" />
-							</div>
-							<div class="pic">
-								<img src="dist/images/4-100x100.jpg" alt="" />
-							</div>
-						</div>
-						<div class="arrow"><i class="fas fa-arrow-right"></i></div>
-					</div>
-					<div class="review">
-						<h3>Paints of the Future</h3>
-						<div class="score">
-							<i class="fas fa-star"></i><i class="fas fa-star"></i
-							><i class="fas fa-star"></i><i class="fas fa-star"></i
-							><i class="fas fa-star"></i>
-						</div>
-						<p>
-							"The response to your MasterStudy has been really overwhelming! Those who
-							participated in the workshop are spreading the work here on campus and
-							the "buzz" is on. The VP of Instruction wants you to come back! Her goal
-							is to have more faculty trained. She also wants to attend a workshop
-							herself. Our president told me Masterstudy needs to be the cornerstone of
-							our success program.""
-						</p>
-					</div>
-				</div>
-			</section>
-			<!-- Reviews section Ends-->
-		</main>
-		<!-- MAIN ENDS -->
-
-		<!-- FOOTER -->
-		<footer>
-			<div class="sitemap flex evenly">
-				<!-- About -->
-				<div class="about">
-					<h3>ABOUT</h3>
-					<p>
-						Masterstudy is Education Wordpress theme featured by Learning Managment
-						System (LMS) for online education.<br />
-						Developed by StylemixThemes.
-					</p>
-
-					<!-- social menu -->
-					<ul class="menu flex social">
-						<li>
-							<a href=""><i class="fab fa-facebook"></i></a>
-						</li>
-						<li>
-							<a href=""><i class="fab fa-twitter"></i></a>
-						</li>
-						<li>
-							<a href=""><i class="fab fa-instagram"></i></a>
-						</li>
-					</ul>
-				</div>
-				<!-- Contact -->
-				<div class="about">
-					<h3>Contact</h3>
-					<p>
-						USA, Callifornia 20, First Avenue, <br />
-						Callifornia
-					</p>
-
-					<p>
-						Tel.: +1 212 458 300 32
-						<br />
-						Fax: +1 212 375 24 14
-					</p>
-
-					<p><a href="">info@masterstudy.com</a></p>
-				</div>
-				<!-- Pages -->
-				<div class="pages">
-					<h3>Contact</h3>
-					<ul class="page-list flex between wrap">
-						<li><a href="">Blog</a></li>
-						<li><a href="">Courses</a></li>
-						<li><a href="">Home</a></li>
-						<li><a href="">Membership A...</a></li>
-						<li><a href="">Shortcodes</a></li>
-						<li><a href="">Typography</a></li>
-					</ul>
-				</div>
-				<!-- Blog post feed -->
-				<div class="blog">
-					<h3>blog</h3>
-					<ul class="blog-feed flex between wrap">
-						<!-- single blog entry -->
-						<li class="flex between it-center">
-							<div class="thumb">
-								<img
-									src="dist/images/photo-1490376840453-5f616fbebe5b-75x75.jpeg"
-									alt=""
-								/>
+				<!-- Stats section-->
+				<section class="stats">
+					<!-- stats container -->
+					<div class="container flex between it-center">
+						<!-- single stat -->
+						<div class="stat flex ju-center">
+							<div class="icon">
+								<i class="fas fa-user-friends"></i>
 							</div>
 							<div class="desc">
-								<h4>Our main target is to "Developing Yourself as a leader"</h4>
-								<span class="date">&#8213; August 9, 2018</span>
+								<div class="value">3195</div>
+								<span>Online Learner</span>
 							</div>
-						</li>
-						<!-- single blog entry -->
-						<li class="flex between">
-							<div class="thumb">
-								<img
-									src="dist/images/photo-1490376840453-5f616fbebe5b-75x75.jpeg"
-									alt=""
-								/>
+						</div>
+						<!-- single stat -->
+						<div class="stat flex ju-center">
+							<div class="icon">
+								<i class="fas fa-film"></i>
 							</div>
 							<div class="desc">
-								<h4>Those Other College Exprenses You Aren't Thinking About</h4>
-								<span class="date">&#8213; June 3, 2018</span>
+								<div class="value">23</div>
+								<span>Video Courses</span>
 							</div>
-						</li>
-					</ul>
+						</div>
+						<!-- single stat -->
+						<div class="stat flex ju-center">
+							<div class="icon">
+								<i class="far fa-images"></i>
+							</div>
+							<div class="desc">
+								<div class="value">437</div>
+								<span>Video Courses</span>
+							</div>
+						</div>
+						<!-- single stat -->
+						<div class="stat flex ju-center">
+							<div class="icon">
+								<i class="far fa-thumbs-up"></i>
+							</div>
+							<div class="desc">
+								<div class="value">1440</div>
+								<span>Excellent Reviews</span>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Stats section Ends-->
+
+				<!-- Reviews section-->
+				<section class="reviews txt-center">
+					<h2>What Students Say</h2>
+					<div class="review-slider">
+						<div class="pagination flex evenly it-center">
+							<div class="arrow"><i class="fas fa-arrow-left"></i></div>
+							<div class="user-pic flex it-center">
+								<div class="pic">
+									<img src="dist/images/1-100x100.jpg" alt="" />
+								</div>
+								<div class="pic pic__active">
+									<img src="dist/images/2-100x100.jpg" alt="" />
+								</div>
+								<div class="pic">
+									<img src="dist/images/4-100x100.jpg" alt="" />
+								</div>
+							</div>
+							<div class="arrow"><i class="fas fa-arrow-right"></i></div>
+						</div>
+						<div class="review">
+							<h3>Paints of the Future</h3>
+							<div class="score">
+								<i class="fas fa-star"></i><i class="fas fa-star"></i
+								><i class="fas fa-star"></i><i class="fas fa-star"></i
+								><i class="fas fa-star"></i>
+							</div>
+							<p>
+								"The response to your MasterStudy has been really overwhelming! Those
+								who participated in the workshop are spreading the work here on campus
+								and the "buzz" is on. The VP of Instruction wants you to come back! Her
+								goal is to have more faculty trained. She also wants to attend a
+								workshop herself. Our president told me Masterstudy needs to be the
+								cornerstone of our success program.""
+							</p>
+						</div>
+					</div>
+				</section>
+				<!-- Reviews section Ends-->
+			</main>
+			<!-- MAIN ENDS -->
+
+			<!-- FOOTER -->
+			<footer>
+				<div class="sitemap flex evenly">
+					<!-- About -->
+					<div class="about">
+						<h3>ABOUT</h3>
+						<p>
+							Masterstudy is Education Wordpress theme featured by Learning Managment
+							System (LMS) for online education.<br />
+							Developed by StylemixThemes.
+						</p>
+
+						<!-- social menu -->
+						<ul class="menu flex social">
+							<li v-for="link in footerSocial">
+								<a :href="`${link.href}`"
+									><i :class="`${link.iconFamily} ${link.iconName}`"></i
+								></a>
+							</li>
+						</ul>
+					</div>
+					<!-- Contact -->
+					<div class="about">
+						<h3>Contact</h3>
+						<p>
+							USA, Callifornia 20, First Avenue, <br />
+							Callifornia
+						</p>
+
+						<p>
+							Tel.: +1 212 458 300 32
+							<br />
+							Fax: +1 212 375 24 14
+						</p>
+
+						<p><a href="">info@masterstudy.com</a></p>
+					</div>
+					<!-- Pages -->
+					<div class="pages">
+						<h3>Contact</h3>
+						<ul class="page-list flex between wrap">
+							<li v-for="link in footerSitemap">
+								<a :href="link.href">{{link.text}}</a>
+							</li>
+						</ul>
+					</div>
+					<!-- Blog post feed -->
+					<div class="blog">
+						<h3>blog</h3>
+						<ul class="blog-feed flex between wrap">
+							<!-- single blog entry -->
+							<li class="flex between it-center">
+								<div class="thumb">
+									<img
+										src="dist/images/photo-1490376840453-5f616fbebe5b-75x75.jpeg"
+										alt=""
+									/>
+								</div>
+								<div class="desc">
+									<h4>
+										<a href="">Our main target is to "Developing Yourself as a leader"</a>
+									</h4>
+									<span class="date">&#8213; August 9, 2018</span>
+								</div>
+							</li>
+							<!-- single blog entry -->
+							<li class="flex between">
+								<div class="thumb">
+									<img
+										src="dist/images/photo-1490376840453-5f616fbebe5b-75x75.jpeg"
+										alt=""
+									/>
+								</div>
+								<div class="desc">
+									<h4>
+										<a href="">Those Other College Exprenses You Aren't Thinking About</a>
+									</h4>
+									<span class="date">&#8213; June 3, 2018</span>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
-			</div>
-			<!-- sitemap ends -->
-		</footer>
-		<!-- FOOTER ENDS -->
+				<!-- sitemap ends -->
+			</footer>
+			<!-- FOOTER ENDS -->
+		</div>
 
 		<!-- CustomJS -->
 		<script src="dist/app.js"></script>
