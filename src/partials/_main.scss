@@ -115,7 +115,7 @@ section {
 
 .book {
 	@include bg-cover;
-	background-image: url("../../dist/images/slider_1-1917x607-1914x606.jpg");
+	background-image: url("images/slider_1-1917x607-1914x606.jpg");
 	padding-top: 2rem;
 	overflow: hidden;
 
@@ -177,7 +177,7 @@ section {
 
 .stats {
 	@include bg-cover;
-	background-image: url("../../dist/images/counter-1919x1101.jpg");
+	background-image: url("images/counter-1919x1101.jpg");
 	background-position: top;
 	.container {
 		@include container;

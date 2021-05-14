@@ -2,7 +2,7 @@ header {
 	@include container;
 	display: flex;
 	font-family: $brand_font;
-	padding: 3rem 0 2.5rem;
+	padding: 4rem 0 2.5rem;
 	.logo {
 		flex-basis: 240px;
 	}
@@ -12,6 +12,8 @@ header {
 			li {
 				position: relative;
 				padding: 0 0.75rem 0.5rem;
+				font-size: calc(#{$font_size}* 1.15);
+
 				.new {
 					color: $base;
 					background-color: $featured;
